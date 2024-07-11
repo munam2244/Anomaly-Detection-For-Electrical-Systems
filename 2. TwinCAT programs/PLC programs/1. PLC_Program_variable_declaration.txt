@@ -1,0 +1,33 @@
+1. VAR_GLOBAL CONSTANT
+ 2.  
+ 3. 	n	: INT := 100
+ 4. 	
+ 5. END_VAR
+ 6.  
+ 7. VAR_GLOBAL
+ 8.
+ 9. 	
+10. 	U_L1 AT %I* : ARRAY[0..(n-1)] OF INT;
+11. 	U_L2 AT %I* : ARRAY[0..(n-1)] OF INT;
+12. 	U_L3 AT %I* : ARRAY[0..(n-1)] OF INT;
+13. 	
+14. 	U_L1real AT %I* : ARRAY[0..(n-1)] OF REAL;
+15. 	U_L2real AT %I* : ARRAY[0..(n-1)] OF REAL;
+16. 	U_L3real AT %I* : ARRAY[0..(n-1)] OF REAL;
+17. 	
+18. 	(*
+19.  
+20. 	I_L1 AT %I* : ARRAY[0..(n-1)] OF INT;
+21. 	I_L2 AT %I* : ARRAY[0..(n-1)] OF INT;
+22. 	I_L3 AT %I* : ARRAY[0..(n-1)] OF INT;
+23. 	
+24. 	I_L1real AT %I* : ARRAY[0..(n-1)] OF REAL;
+25. 	I_L2real AT %I* : ARRAY[0..(n-1)] OF REAL;
+26. 	I_L3real AT %I* : ARRAY[0..(n-1)] OF REAL;
+27. 	
+28. 	P_L1 AT %I* : ARRAY[0..(n-1)] OF REAL;
+29. 	P_L2 AT %I* : ARRAY[0..(n-1)] OF REAL;
+30. 	P_L3 AT %I* : ARRAY[0..(n-1)] OF REAL;
+31. 	*)		
+32. 	
+33. END_VAR

@@ -1,0 +1,25 @@
+1. //fbLocalTime(bEnable := TRUE);
+2. IF NOT bInit
+3. THEN
+4.     dtBufferDT := SYSTEMTIME_TO_DT(fbLocalTime.systemTime);
+5.     IF fbLocalTime.bValid 
+6.     THEN
+7.         bInit := TRUE;
+8.     END_IF
+9. ELSE
+10.     nTime := nTime + 1;
+11.     tBufferTime := UINT_TO_TIME(nTime*10);
+12.     IF tBufferTime = T#1S
+13.     THEN
+14.         //Add a second to your system time
+15.         ntime := 0;
+16.         nCalcBuffer := DT_TO_UDINT(dtBufferDT)+1;
+17.         dtBufferDT := UDINT_TO_DT(nCalcBuffer);
+18.         sLogTime := DT_TO_STRING(dtBufferDT);
+19.         sLogTimeWithMs := sLogTime;
+20.     ELSE
+21.         //Add ms string time-stamp
+22.         sMs := TIME_TO_STRING(tBufferTime);
+23.         sLogTimeWithMs := CONCAT(sLogTime,sMs);
+24.     END_IF
+25. END_IF

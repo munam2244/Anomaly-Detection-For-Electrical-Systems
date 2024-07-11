@@ -1,0 +1,15 @@
+1. FOR i:= 0 TO (n-1) DO
+2. 	
+3. 	U_L1real[i] := INT_TO_REAL(U_L1[i]) * 0.0225;
+4. 	U_L2real[i] := INT_TO_REAL(U_L2[i]) * 0.0225;
+5. 	U_L3real[i] := INT_TO_REAL(U_L3[i]) * 0.0225;
+6.  
+7. 	I_L1real[i] := INT_TO_REAL(I_L1[i]) * 0.000056 * 12;
+8. 	I_L2real[i] := INT_TO_REAL(I_L2[i]) * 0.000056 * 12;
+9. 	I_L3real[i] := INT_TO_REAL(I_L3[i]) * 0.000056 * 12;
+10.  
+11. 	P_L1[i] := U_L1real[i] * I_L1real[i];
+12. 	P_L2[i] := U_L2real[i] * I_L2real[i];
+13. 	P_L3[i] := U_L3real[i] * I_L3real[i]
+14.  
+15. END_FOR

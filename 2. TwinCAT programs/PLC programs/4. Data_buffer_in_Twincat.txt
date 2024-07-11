@@ -1,0 +1,44 @@
+Data sample
+
+1. TYPE ST_Data :
+2. STRUCT
+3.     Timestamp        : LINT;
+4.     fAM              : LREAL;
+5.     fPeak            : LREAL;
+6.     fPulse           : LREAL;
+7.     fSawtooth        : LREAL;
+8.     fSine            : LREAL;
+9.     fSquare          : LREAL;
+10.    fStairs          : LREAL;
+11.    fTriangular      : LREAL;
+12. END_STRUCT
+13. END_TYPE
+
+Extract from the function block FB_Record_tbl_Signals
+( "State Machine" => State: Recording)
+
+1. bRecording := TRUE;
+2.  //Fill buffer
+3. stData[nWriteBufferIndex, nWriteIndex].Timestamp := nTimestamp;
+4. stData[nWriteBufferIndex, nWriteIndex].fAM := fAM;
+5. stData[nWriteBufferIndex, nWriteIndex].fPeak := fPeak;
+6. stData[nWriteBufferIndex, nWriteIndex].fPulse := fPulse;
+7. stData[nWriteBufferIndex, nWriteIndex].fSawtooth := fSawtooth;
+8. stData[nWriteBufferIndex, nWriteIndex].fSine := fSine;
+9. stData[nWriteBufferIndex, nWriteIndex].fSquare := fSquare;
+10. stData[nWriteBufferIndex, nWriteIndex].fStairs := fStairs;
+11. stData[nWriteBufferIndex, nWriteIndex].fTriangular := fTriangular;
+12. //Set buffer index
+13. nWriteIndex:=nWriteIndex+1;
+14. IF nWriteIndex = 100 THEN
+15.             nWriteIndex := 0;
+16.              aWriteSQL[nWriteBufferIndex]:= TRUE;
+17.             nWriteBufferIndex := nWriteBufferIndex + 1;
+18.             IF nWriteBufferIndex = 20 THEN
+19.                     nWriteBufferIndex := 0;
+20.             END_IF
+21.            IF aWriteSQL[nWriteBufferIndex] THEN
+22.                   nState := 255;
+23.                  RETURN;
+24.           END_IF
+25.        END_IF

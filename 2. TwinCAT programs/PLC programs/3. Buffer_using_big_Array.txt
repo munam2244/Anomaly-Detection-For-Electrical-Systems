@@ -1,0 +1,49 @@
+1. VAR CONSTANT
+2. 	n			: INT := 100; // oversampling factor 
+3. 	samples		: INT := 4000; 
+4. END_VAR
+5.  
+6.  
+7. FOR j:= 0 TO (samples - 1) BY 100 DO 
+8. 	
+9. 	FOR i := 0 TO (n-1) DO
+10. 		
+11. 		//Spannung[V] (0.0225V/digit)
+12. 		U_L1real[i] := INT_TO_REAL(U_L1[i]) * 0.0225;
+13. 		U_L2real[i] := INT_TO_REAL(U_L2[i]) * 0.0225;
+14. 		U_L3real[i] := INT_TO_REAL(U_L3[i]) * 0.0225;
+15. 		
+16. 		
+17. 		//Big array
+18. 		
+19. 		 U_L1big[j + i] := U_L1real[i];
+20. 		 U_L2big[j + i] := U_L2real[i];
+21. 		 U_L3big[j + i] := U_L3real[i];
+22. 		
+23. 		
+24. 		//Strom[A] für FESTEN 1A Messbereich (56µA/digit) 
+25. 		I_L1real[i] := INT_TO_REAL(I_L1[i]) * 0.000056 * 12;
+26. 		I_L2real[i] := INT_TO_REAL(I_L2[i]) * 0.000056 * 12;
+27. 		I_L3real[i] := INT_TO_REAL(I_L3[i]) * 0.000056 * 12;
+28. 		
+29. 		
+30. 		//Big array I
+31. 		
+32. 		 I_L1big[j + i] := I_L1real[i];
+33. 		 I_L2big[j + i] := I_L2real[i];
+34. 		 I_L3big[j + i] := I_L3real[i];
+35. 		
+36. 		//Momentanleistung[VA]
+37. 		P_L1[i] := U_L1real[i] * I_L1real[i];
+38. 		P_L2[i] := U_L2real[i] * I_L2real[i];
+39. 		P_L3[i] := U_L3real[i] * I_L3real[i];
+40. 				
+41. 		
+42. 		// Big   Momentanleistung[VA]
+43. 		P_L1big[j + i] := U_L1big[j + i] * I_L1big[j + i];
+44. 		P_L2big[j + i] := U_L2big[j + i] * I_L2big[j + i];
+45. 		P_L3big[j + i] := U_L3big[j + i] * I_L3big[j + i];
+46. 				
+47. 	END_FOR
+48.  
+49. END_FOR
