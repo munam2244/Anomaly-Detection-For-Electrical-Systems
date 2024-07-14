@@ -1,0 +1,90 @@
+======   Power anomalies Tests Description  =====
+
+
+1. Power failure – A total loss of utility power.
+
+Value from AnalogDiscovery2   =    4V      -    0v    -      4v
+Voltage at the terminals      =   1,65V    -    0v    -    1,65V
+
+Time			      =   15sec    -   90sec  -     15sec   		
+
+
+
+
+2. Power sag – A short term low voltage.  (90% of nominal voltage based on standard)
+ 
+Value from AnalogDiscovery2   =     4 V    -   3.2V  -      4v
+Voltage at the terminals      =    1.65V   -   1.32V -     1.65V
+
+Time                          =    45sec   -   30sec  -    45sec   		
+
+
+
+3. Power surge (spike) – A short term high voltage above 110 percent normal voltage. (110% of nominal voltage based on standard)
+
+Value from AnalogDiscovery2   =    4 V    -    4.8v    -     4v
+Voltage at the terminals      =   1.65V   -   1.98V    -    1.65V
+
+Time                          =   45sec   -   30sec    -     45sec   		
+
+
+
+
+4. Under-voltage (brownout) – Reduced line voltage for an extended period of a few minutes to a few days (More than 1 min in this case). 
+   This often happens during the summer months when people set their air conditioners higher than normal.
+
+
+Value from AnalogDiscovery2    =     4 V    -     3.2v   -      4v
+Voltage at the terminals       =    1.65V   -    1.32V   -     1.65V
+
+Time                           =    25sec   -    70sec   -     25sec   		
+
+
+
+
+5. Over-voltage – An extended period of increased line voltage for a few minutes up to a few days  (More than 1 min in this case).
+
+Value from AnalogDiscovery2   =    4 V    -    4.8v    -     4v
+Voltage at the terminals      =   1.65V   -   1.98V    -    1.65V
+
+Time                          =   25sec   -   70sec    -     25sec   
+
+
+
+
+
+6. Electrical line noise – A high frequency waveform caused by radio frequency interference (RFI) 
+    or electromagnetic interference (EMI).
+
+Value from AnalogDiscovery2   =        4 V / 50Hz    -       4v   / 50Hz with 10kHz noise signal    -      4v  / 50Hz 
+Value at the terminals        =     1.65 V / 50Hz    -     1.65v  / 50Hz with 10kHz noise signal    -      4v  / 50Hz 
+
+Time                          =        45sec         -                 30sec                         -     45sec  	
+
+
+
+
+7. Frequency variation – A change in frequency stability of 50 or 60 Hz. (less than 10 sec according to standard)
+
+
+Value from AnalogDiscovery2    =     4V / 50Hz  -    4V / 60Hz      -    4V  / 50Hz 
+Voltage at the terminals       =   1.65 / 50Hz  -    1.65V / 60Hz   -    1.65V  / 50Hz 
+
+Time                           =       56sec    -      8sec         -     56sec   		
+
+
+8. Switching transient – Instantaneous undervoltage measured in nanoseconds.
+
+
+
+
+
+
+9. Harmonic distortion – The distortion of a normal power wave, generally transmitted by nonlinear loads.
+
+
+
+
+
+
+
