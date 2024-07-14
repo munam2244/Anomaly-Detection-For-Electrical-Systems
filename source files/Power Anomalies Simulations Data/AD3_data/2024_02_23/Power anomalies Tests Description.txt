@@ -1,0 +1,72 @@
+======   Power anomalies Tests Description  =====
+
+
+1. Power failure – A total loss of utility power.
+
+Value   =    5V      -    0v    -      5v
+Time    =   20sec    -   10sec  -     20sec   		
+
+
+
+2. Power sag – A short term low voltage.
+ 
+Value   =     5 V    -   3.5v  -      5v
+Time    =    20sec   -   5sec  -     20sec   		
+
+
+
+3. Power surge (spike) – A short term high voltage above 110 percent normal voltage.
+
+Value   =   3.5 V    -    5v    -     3.5v
+Time    =   10sec    -   20sec  -     10sec   		
+
+
+
+
+4. Under-voltage (brownout) – Reduced line voltage for an extended period of a few minutes to a few days. 
+   This often happens during the summer months when people set their air conditioners higher than normal.
+
+
+Value   =     5 V    -     4v   -      5v
+Time    =    10sec   -   20sec  -     10sec   		
+
+
+
+
+5. Over-voltage – An extended period of increased line voltage for a few minutes up to a few days.
+
+Value   =     3.5 V   -    5v   -      3.5v
+Time    =    10sec   -   20sec  -     10sec   		
+
+
+
+
+6. Electrical line noise – A high frequency waveform caused by radio frequency interference (RFI) 
+    or electromagnetic interference (EMI).
+
+
+
+Value   =     5 V / 50Hz  -     5v  / 50Hz with 10kHz noise signal    -      5v  / 50Hz 
+Time    =       20sec     -                    10sec                  -     20sec   		
+
+
+
+
+
+7. Frequency variation – A change in frequency stability of 50 or 60 Hz.
+
+
+Value   =     5 V / 50Hz  -    5v  / 60Hz   -      5v  / 50Hz 
+Time    =       20sec     -      10sec         -     20sec   		
+
+
+8. Switching transient – Instantaneous undervoltage measured in nanoseconds.
+
+
+
+
+9. Harmonic distortion – The distortion of a normal power wave, generally transmitted by nonlinear loads.
+
+
+
+
